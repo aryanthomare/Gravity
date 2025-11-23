@@ -7,14 +7,10 @@ from pygame import gfxdraw
 from copy import deepcopy
 import numpy as np
 
-# sv = input("Starting Vector: ")
-# co = input("cords: ")
 
-# co = co.split(" ")
-# x= int(co[0])
-# y= int(co[1])
 x = 200
 y = 200
+
 white = (255, 255, 255)
 green = (165, 238, 93)
 pink = (245, 212, 229)
@@ -51,13 +47,10 @@ class Particle():
     def moveplanet(self):
         self.fx = sum(self.forcesx)
         self.fy = sum(self.forcesy)
-
         self.accelx = self.fx / self.mass
         self.accely = self.fy / self.mass
-
         self.vx += self.accelx
         self.vy += self.accely
-
         self.xpos += self.vx
         self.ypos += self.vy
 
